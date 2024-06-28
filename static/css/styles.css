@@ -1,0 +1,206 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Search Container Styles */
+.search-container {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Input and Select Styles */
+input[type="text"], select {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #3a3a3a;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]::placeholder, select::placeholder {
+    color: #888;
+}
+
+/* Button Styles */
+button {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a5a5a;
+}
+
+/* Filter Styles */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters select {
+    flex: 1;
+}
+
+/* Results Container Styles */
+#results-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Job Listings Styles */
+.job-listings {
+    flex: 1;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.job-listing {
+    padding: 1rem;
+    border-bottom: 1px solid #2c2c2c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.job-listing:hover {
+    background-color: #2c2c2c;
+}
+
+/* Job Details Styles */
+.job-details {
+    flex: 2;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-height: 600px; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.job-title {
+    color: #bb86fc;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.job-company, .job-location {
+    color: #9e9e9e;
+    font-size: 0.9rem;
+}
+
+/* Apply Button Styles */
+.apply-btn {
+    display: inline-block;
+    background-color: #bb86fc;
+    color: #121212;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #a66ffc;
+}
+
+/* Execution Time Styles */
+.execution-time {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 0.9rem;
+    color: #9e9e9e;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #results-container {
+        flex-direction: column;
+    }
+
+    .job-listings, .job-details {
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+}
+
+/* Focus Styles */
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #bb86fc;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+/* Transition for Smooth Color Changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

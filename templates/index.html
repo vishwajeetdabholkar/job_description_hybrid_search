@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingleStore Job Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SingleStore</div>
+        <h1>Job Search</h1>
+        <!-- <div class="user-profile">
+            <img src="{{ url_for('static', filename='img/user-profile.jpg') }}" alt="User Profile">
+        </div> -->
+    </header>
+    
+    <main>
+        <div class="search-container">
+            <input type="text" id="keyword" placeholder="Keyword">
+            <input type="text" id="location" placeholder="Select Location">
+            <!-- <input type="text" id="location-type" placeholder="Location Type">           -->
+            <button id="search-btn" onclick="searchJobs()">Search</button>
+        </div>
+        
+        <div class="filters">
+            <select id="location-type">
+                <option value="">Location Type</option>
+                <option value="remote">Remote</option>
+                <option value="on-site">On-site</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+            <select id="seniority">
+                <option value="">Seniority</option>
+                <option value="entry">Entry Level</option>
+                <option value="mid">Mid-Level</option>
+                <option value="senior">Senior</option>
+            </select>
+            <select id="employment-type">
+                <option value="">Employment Type</option>
+                <option value="full-time">FULL_TIME</option>
+                <option value="part-time">PART_TIME</option>
+                <option value="contract">CONTRACT</option>
+                <option value="contract">INTERNSHIP</option>
+                <option value="contract">VOLUNTEER</option>
+                <option value="contract">OTHER</option>
+            </select>
+            <select id="company">
+                <option value="">Company</option>
+                <!-- Add company options dynamically if needed -->
+            </select>
+            <button id="reset-btn" onclick="resetFilters()">Reset</button>
+        </div>
+        
+        <div id="results-container" class="results-container">
+            <!-- Search results will appear here -->
+        </div>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</body>
+</html>
