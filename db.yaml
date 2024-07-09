@@ -1,0 +1,4 @@
+mysql_host: '<singlestore_host_name>'
+mysql_user: '<your_username>'
+mysql_password: '<your_password>'
+mysql_db: '<your_db_name>'
